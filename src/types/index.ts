@@ -9,6 +9,12 @@ export interface BlogPost {
   slug: string
 }
 
+export interface RichBlogPost extends BlogPost {
+  author: string
+  readTime: string
+  content: string[]
+}
+
 export interface TestQuestion {
   id: number
   question: string

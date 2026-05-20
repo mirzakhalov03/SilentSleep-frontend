@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from '../../hooks/useTranslation'
 import { useLanguage } from '../../contexts/LanguageContext'
+import Logo from '../ui/Logo'
 
 export default function Footer() {
   const t = useTranslation()
@@ -12,9 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <p className="text-xl font-bold tracking-tight mb-2">
-              Silent<span className="text-brand-primary">Sleep</span>
-            </p>
+            <Logo variant="white" className="mb-2" />
             <p className="text-sm text-white/60">{t.footer.tagline}</p>
           </div>
 

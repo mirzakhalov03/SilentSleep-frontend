@@ -1,13 +1,14 @@
-import { useTranslation } from '../hooks/useTranslation'
+import { useState } from 'react'
+import SleepTrackHero from '../components/sections/sleeptrack/SleepTrackHero'
+import SleepTrackLayout, { type SleepTrackTab } from '../components/sections/sleeptrack/SleepTrackLayout'
 
 export default function SleepTrack() {
-  const t = useTranslation()
+  const [activeTab, setActiveTab] = useState<SleepTrackTab>('doctors')
+
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-brand-dark">{t.placeholders.sleeptrack.title}</h1>
-        <p className="text-content-muted mt-2">{t.placeholders.sleeptrack.body}</p>
-      </div>
-    </div>
+    <>
+      <SleepTrackHero />
+      <SleepTrackLayout activeTab={activeTab} setActiveTab={setActiveTab} />
+    </>
   )
 }

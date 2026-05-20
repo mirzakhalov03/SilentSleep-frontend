@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import Treatment from './pages/Treatment'
 import About from './pages/About'
 import SleepTrack from './pages/SleepTrack'
+import Blog from './pages/Blog'
+import BlogPostPage from './pages/BlogPostPage'
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
           <Route path="/treatment" element={<Treatment />} />
           <Route path="/about" element={<About />} />
           <Route path="/sleeptrack" element={<SleepTrack />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
         </Routes>
       </main>
       <Footer />
