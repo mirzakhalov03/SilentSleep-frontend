@@ -7,7 +7,7 @@ const ru: Translations = {
     about: "О нас",
     blog: "Блог",
     test: "Тест сна",
-    cta: "SleepTrack",
+    cta: "UyquLab",
   },
   hero: {
     headline: "Вас беспокоит храп и остановки дыхания во сне?",

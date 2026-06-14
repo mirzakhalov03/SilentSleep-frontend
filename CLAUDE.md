@@ -26,14 +26,16 @@ npm run preview   # serve the dist/ build locally
 
 ### Routing
 
-Four routes defined in `App.tsx`:
+Six routes defined in `App.tsx`:
 
 | Path | Page |
 |---|---|
-| `/` | `Home` — full landing page with section components |
-| `/treatment` | `Treatment` |
-| `/about` | `About` |
-| `/sleeptrack` | `SleepTrack` |
+| `/` | `Home` — landing page composing Hero, LocationContact, ApneaInfo, Blog, SleepTest |
+| `/treatment` | `Treatment` — placeholder (renders `t.placeholders.treatment`) |
+| `/about` | `About` — composes `AboutMission` + `DoctorsTeam` |
+| `/sleeptrack` | `SleepTrack` — hero + tabbed layout |
+| `/blog` | `Blog` — post listing with grid/list view toggle |
+| `/blog/:slug` | `BlogPostPage` — full article, looked up by `slug` from `mockBlogPosts` |
 
 `Navbar` and `Footer` are rendered outside `<Routes>` and appear on every page.
 
@@ -42,11 +44,19 @@ Four routes defined in `App.tsx`:
 ```
 src/components/
   layout/     — Navbar, Footer (app shell)
-  sections/   — full-width page sections used by pages (Hero, ApneaInfo, Blog, SleepTest, LocationContact)
-  ui/         — primitives: Button, BlogCard, QuestionCard
+  sections/   — full-width page sections (Hero, ApneaInfo, Blog, SleepTest,
+                LocationContact, AboutMission, DoctorsTeam)
+    sleeptrack/  — SleepTrackHero, SleepTrackLayout + tabs/ (Doctors,
+                   Equipments, Services, Benefits)
+  ui/         — primitives: Button, BlogCard, QuestionCard, Logo
+src/data/     — mock content (mockBlogPosts.ts) backing the blog routes
 ```
 
 Pages (`src/pages/`) are thin composers that assemble section components.
+
+**SleepTrack tabs** use a registry pattern in `SleepTrackLayout.tsx`: `SleepTrackTab`
+union → `TAB_COMPONENTS` record. Adding a tab = add the key to the union, the record,
+and a `t.sleeptrack.tabs.*` label — no conditional rendering.
 
 ### i18n
 
@@ -76,8 +86,8 @@ Do not add new colors outside `@theme {}`.
 
 ### Scroll navigation
 
-`Navbar` uses `scrollToSection(id)` to smooth-scroll to section IDs on the home page. Sections that are scroll targets must have a matching `id` attribute. Current targets: `id="apnea"`, `id="test"`.
+`Navbar` uses `scrollToSection(id)` to smooth-scroll to section IDs on the home page. Sections that are scroll targets must have a matching `id` attribute. Navbar links target `id="apnea"` and `id="test"` (an `id="contact"` section also exists but is not linked from the Navbar).
 
 ### Types
 
-Shared types (`Lang`, `BlogPost`, `TestQuestion`, `TestOption`, `RiskLevel`) live in `src/types/index.ts`.
+Shared types live in `src/types/index.ts`: `Lang`, `BlogPost`, `RichBlogPost` (extends `BlogPost` with `author`/`readTime`/`content[]` for full articles), `TestQuestion`, `TestOption`, `RiskLevel`.

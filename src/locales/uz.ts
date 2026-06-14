@@ -5,7 +5,7 @@ const uz = {
     about: "Biz Haqimizda",
     blog: "Blog",
     test: "Uyqu testi",
-    cta: "SleepTrack",
+    cta: "UyquLab",
   },
   hero: {
     headline: "Xurrak va uyqudagi nafas to'xtashi sizni bezovta qiladimi?",
