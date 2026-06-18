@@ -1,4 +1,5 @@
 import { useTranslation } from '../../hooks/useTranslation'
+import doctor1 from '../../assets/doctor1.jpg'
 
 function AvatarPlaceholder() {
   return (
@@ -34,11 +35,11 @@ export default function DoctorsTeam() {
             <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
               {/* Photo */}
               <div className="w-full aspect-[4/3] overflow-hidden">
-                {doctor.imageUrl ? (
+                {i === 0 || doctor.imageUrl ? (
                   <img
-                    src={doctor.imageUrl}
+                    src={i === 0 ? doctor1 : doctor.imageUrl}
                     alt={doctor.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 ) : (
                   <AvatarPlaceholder />

@@ -31,7 +31,7 @@ export default function BlogPostPage() {
     <article className="min-h-screen bg-white">
 
       {/* Hero image */}
-      <div className="w-full aspect-[21/9] max-h-[480px] overflow-hidden bg-brand-secondary">
+      <div className="w-full aspect-21/9 max-h-120 overflow-hidden bg-brand-secondary">
         {post.imageUrl ? (
           <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover" />
         ) : (
