@@ -39,6 +39,8 @@ Six routes defined in `App.tsx`:
 
 `Navbar` and `Footer` are rendered outside `<Routes>` and appear on every page.
 
+**UyquLab CTA:** The Navbar's primary CTA (`t.nav.cta`) is an external `<a>` to the standalone UyquLab SPA (`UYQULAB_URL = 'https://uyqulab.uz'` in `Navbar.tsx`), not an in-app link. The desktop "hanging" CTA renders on the home page only (`location.pathname === '/'`); the mobile menu CTA renders everywhere. The `/sleeptrack` route still exists and is fully built, but nothing in the Navbar links to it anymore — reach it by direct URL.
+
 ### Component layers
 
 ```
@@ -82,7 +84,7 @@ All color tokens are declared in the `@theme {}` block in `src/index.css`. Use t
 | `--color-content-base` | `text-content-base` |
 | `--color-content-muted` | `text-content-muted` |
 
-Do not add new colors outside `@theme {}`.
+The `@theme {}` block also defines the `--font-family-sans` (Inter) token and reusable animation tokens (`--animate-hang-glow`, `--animate-nudge-x`, whose `@keyframes` follow the block). Do not add new colors outside `@theme {}`.
 
 ### Scroll navigation
 

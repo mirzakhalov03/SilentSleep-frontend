@@ -4,9 +4,10 @@ import QuestionCard from '../ui/QuestionCard'
 import Button from '../ui/Button'
 import type { TestOption, RiskLevel } from '../../types'
 
+// STOP-BANG scoring: 0–2 low · 3–4 medium · 5–8 high
 function getRiskLevel(score: number): RiskLevel {
-  if (score <= 5) return 'low'
-  if (score <= 10) return 'medium'
+  if (score <= 2) return 'low'
+  if (score <= 4) return 'medium'
   return 'high'
 }
 
@@ -126,7 +127,7 @@ export default function SleepTest() {
         {/* Section header */}
         <div className="text-center mb-10">
           <span className="inline-block text-xs font-bold text-brand-primary/80 uppercase tracking-widest mb-3">
-            Bepul Ekspress Test
+            Bepul STOP-BANG Test
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white">{t.test.title}</h2>
           <p className="mt-3 text-white/60 text-sm max-w-md mx-auto">{t.test.subtitle}</p>
@@ -213,7 +214,7 @@ export default function SleepTest() {
               <p className="text-xs text-content-muted font-semibold uppercase tracking-wider mb-1">Umumiy ball</p>
               <p className="text-4xl font-bold text-brand-dark">
                 {totalScore}
-                <span className="text-lg font-normal text-content-muted"> / 15</span>
+                <span className="text-lg font-normal text-content-muted"> / 8</span>
               </p>
               {/* Score bar */}
               <div className="mt-3 w-full bg-gray-200 rounded-full h-2 relative">
@@ -221,11 +222,11 @@ export default function SleepTest() {
                   className={`h-2 rounded-full transition-all duration-700 ${
                     riskLevel === 'low' ? 'bg-emerald-500' : riskLevel === 'medium' ? 'bg-amber-500' : 'bg-red-500'
                   }`}
-                  style={{ width: `${(totalScore / 15) * 100}%` }}
+                  style={{ width: `${(totalScore / 8) * 100}%` }}
                 />
                 {/* Tier markers */}
-                <div className="absolute top-0 h-2 w-0.5 bg-white/80" style={{ left: `${(5 / 15) * 100}%` }} />
-                <div className="absolute top-0 h-2 w-0.5 bg-white/80" style={{ left: `${(10 / 15) * 100}%` }} />
+                <div className="absolute top-0 h-2 w-0.5 bg-white/80" style={{ left: `${(2 / 8) * 100}%` }} />
+                <div className="absolute top-0 h-2 w-0.5 bg-white/80" style={{ left: `${(4 / 8) * 100}%` }} />
               </div>
               <div className="flex justify-between text-[10px] text-content-muted mt-1 px-0.5">
                 <span>Past</span>

@@ -15,7 +15,7 @@ const Placeholder = () => (
     <circle cx="200" cy="140" r="30" fill="#0D1F3C" opacity="0.05" />
     <path d="M0 130 Q80 100 160 130 Q240 160 320 130 L320 180 L0 180Z" fill="#1B5EC9" opacity="0.06" />
     <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#1B5EC9" opacity="0.2" fontSize="13" fontFamily="Inter, sans-serif" fontWeight="600">
-      SilentSleep Blog
+      Sokin Uyqu Blog
     </text>
   </svg>
 )

@@ -9,7 +9,7 @@ const PlaceholderHero = () => (
     <circle cx="700" cy="400" r="150" fill="#0D1F3C" opacity="0.04" />
     <path d="M0 380 Q300 320 600 380 Q900 440 1200 380 L1200 500 L0 500Z" fill="#1B5EC9" opacity="0.06" />
     <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#1B5EC9" opacity="0.15" fontSize="28" fontFamily="Inter, sans-serif" fontWeight="700">
-      SilentSleep Blog
+      Sokin Uyqu Blog
     </text>
   </svg>
 )

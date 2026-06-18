@@ -10,14 +10,14 @@ const uz = {
   hero: {
     headline: "Xurrak va uyqudagi nafas to'xtashi sizni bezovta qiladimi?",
     subtext:
-      "SilentSleep klinikasi zamonaviy usullar yordamida xurrak va uyqu apnoesini samarali davolaydi. Birinchi qadamni bugun qo'ying.",
+      "Sokin Uyqu klinikasi zamonaviy usullar yordamida xurrak va uyqu apnoesini samarali davolaydi. Birinchi qadamni bugun qo'ying.",
     ctaPrimary: "Bog'lanish",
     ctaSecondary: "Ko'proq bilish",
   },
   location: {
     title: "Bizning manzil",
     address: "Qashqar dahasi, 24A, 100017, Toshkent",
-    phone: "77 113 38 83",
+    phone: "77 103 38 83",
     hoursTitle: "Ish vaqti",
     hours: [
       { day: "Dushanba", time: "09:00 – 20:00" },
@@ -95,7 +95,7 @@ const uz = {
   test: {
     title: "Uyqu testini o'ting",
     subtitle:
-      "5 ta savolga javob bering va uyqu sog'lig'ingiz haqida darhol natija oling.",
+      "STOP-BANG anketasi: 8 ta savolga «Ha» yoki «Yo'q» deb javob bering va uyqu apnoesi xavfingizni bilib oling.",
     next: "Keyingisi",
     result: "Natija",
     restart: "Qaytadan boshlash",
@@ -104,52 +104,66 @@ const uz = {
     questions: [
       {
         id: 1,
-        question: "Siz qanchalik tez-tez baland xurrak otasiz?",
+        question: "Baland xurraklayman (xurragim yopiq eshik ortidan ham eshitiladi).",
         options: [
-          { label: "Hech qachon", score: 0 },
-          { label: "Ba'zan", score: 1 },
-          { label: "Tez-tez", score: 2 },
-          { label: "Deyarli har kuni", score: 3 },
+          { label: "Ha", score: 1 },
+          { label: "Yo'q", score: 0 },
         ],
       },
       {
         id: 2,
-        question: "Uyqudan keyin ham o'zingizni charchagan yoki uyqusi yetmagandek his qilasizmi?",
+        question: "Kunduzi tez-tez charchayman yoki uyqusirayman.",
         options: [
-          { label: "Yo'q, deyarli hech qachon", score: 0 },
-          { label: "Ba'zan", score: 1 },
-          { label: "Haftada bir necha marta", score: 2 },
-          { label: "Har kuni yoki deyarli har kuni", score: 3 },
+          { label: "Ha", score: 1 },
+          { label: "Yo'q", score: 0 },
         ],
       },
       {
         id: 3,
-        question: "Siz uxlayotganda nafas to'xtab qolishi yoki bo'g'ilib uyg'onishingizni kimdir sezganmi?",
+        question: "Kimdir uyqum davomida nafasim to'xtab qolishini ko'rgan.",
         options: [
-          { label: "Hech qachon", score: 0 },
-          { label: "Ishonchim komil emas", score: 1 },
-          { label: "Ha, bir necha marta aytishgan", score: 2 },
-          { label: "Ha, tez-tez kuzatilgan", score: 3 },
+          { label: "Ha", score: 1 },
+          { label: "Yo'q", score: 0 },
         ],
       },
       {
         id: 4,
-        question: "Sizda quyidagi holatlardan qaysi biri mavjud?",
+        question: "Menda yuqori qon bosimi bor (yoki shu bo'yicha davolanaman).",
         options: [
-          { label: "Hech biri", score: 0 },
-          { label: "Yuqori qon bosimi", score: 1 },
-          { label: "Ortiqcha vazn yoki semizlik", score: 2 },
-          { label: "Yuqori qon bosimi va ortiqcha vazn ikkalasi ham mavjud", score: 3 },
+          { label: "Ha", score: 1 },
+          { label: "Yo'q", score: 0 },
         ],
       },
       {
         id: 5,
-        question: "Kunduz kuni quyidagi holatlar sizda qanchalik uchraydi?",
+        question: "Tana massa indeksim 35 kg/m² dan yuqori.",
         options: [
-          { label: "Hech qachon uyqu bosmaydi", score: 0 },
-          { label: "Ba'zan uyqu bosadi", score: 1 },
-          { label: "Mashina, dars yoki ish payti uyqu keladi", score: 2 },
-          { label: "Kunduz kuni tez-tez uxlab qolaman yoki juda kuchli uyqu bosadi 😴", score: 3 },
+          { label: "Ha", score: 1 },
+          { label: "Yo'q", score: 0 },
+        ],
+      },
+      {
+        id: 6,
+        question: "Yoshim 50 dan katta.",
+        options: [
+          { label: "Ha", score: 1 },
+          { label: "Yo'q", score: 0 },
+        ],
+      },
+      {
+        id: 7,
+        question: "Bo'yin aylanam 40 sm dan katta.",
+        options: [
+          { label: "Ha", score: 1 },
+          { label: "Yo'q", score: 0 },
+        ],
+      },
+      {
+        id: 8,
+        question: "Erkak jinsiga mansubman.",
+        options: [
+          { label: "Ha", score: 1 },
+          { label: "Yo'q", score: 0 },
         ],
       },
     ],
@@ -158,25 +172,25 @@ const uz = {
         level: "low" as const,
         title: "Past xavf",
         message:
-          "Sizning natijalaringiz uyqu apnoesi xavfining past ekanligini ko'rsatmoqda. Sog'lom uyqu odatlarini saqlab boring.",
+          "Natijangiz (0–2 ball) uyqu apnoesi xavfi pastligini ko'rsatadi. Profilaktika va sog'lom uyqu odatlarini saqlab boring.",
       },
       medium: {
         level: "medium" as const,
         title: "O'rtacha xavf",
         message:
-          "Sizda uyqu apnoesiga xos ba'zi belgilar mavjud. Shifokor bilan maslahatlashish tavsiya etiladi.",
+          "Natijangiz (3–4 ball) o'rtacha xavfni bildiradi. Mutaxassis bilan konsultatsiya tavsiya etiladi.",
       },
       high: {
         level: "high" as const,
         title: "Yuqori xavf",
         message:
-          "Natijalaringiz uyqu apnoesining yuqori xavfini ko'rsatmoqda. Tezroq shifokorga murojaat qilishni tavsiya etamiz.",
+          "Natijangiz (5–8 ball) yuqori xavfni ko'rsatadi. HSAT yoki PSG tekshiruvidan o'tishingiz tavsiya etiladi.",
       },
     },
   },
   footer: {
     tagline: "Sog'lom uyqu — sog'lom hayot.",
-    rights: "© 2026 SilentSleep. Barcha huquqlar himoyalangan.",
+    rights: "© 2026 Sokin Uyqu. Barcha huquqlar himoyalangan.",
     contact: "Aloqa",
     nav: "Sahifalar",
   },
@@ -184,7 +198,7 @@ const uz = {
     badge: "Biz haqimizda",
     headline: "Uyqu sog'lig'ingiz — bizning maqsadimiz",
     paragraphs: [
-      "SilentSleep — uyqu apnoesi va xurrak muammolarini zamonaviy usullar bilan davolashga ixtisoslashgan tibbiyot markazi. Biz har bir bemorga individual yondashuv va ilmiy asoslangan davolash usullarini taklif etamiz.",
+      "Sokin Uyqu — uyqu apnoesi va xurrak muammolarini zamonaviy usullar bilan davolashga ixtisoslashgan tibbiyot markazi. Biz har bir bemorga individual yondashuv va ilmiy asoslangan davolash usullarini taklif etamiz.",
       "Klinikamiz uyqu laboratoriyasi, diagnostika va davolash bo'limlari bilan to'liq jihozlangan. Mutaxassislarimiz uyqu tibbiyoti sohasida keng tajribaga ega bo'lib, CPAP terapiyasi va boshqa zamonaviy davolash usullarini qo'llaydi.",
     ],
     values: [
@@ -209,9 +223,9 @@ const uz = {
     teamSubtitle: "Uyqu tibbiyoti sohasida tajribali mutaxassislar jamoasi.",
     doctors: [
       {
-        name: "Dr. [Ism Familiya]",
-        title: "Uyqu tibbiyoti mutaxassisi",
-        bio: "Uyqu apnoesi va nafas yo'llari kasalliklari bo'yicha 10 yillik tajribaga ega.",
+        name: "Dr. Tuygunxon Muzaffarov",
+        title: "LOR · rinoxirurg · somnolog-xirurg · Bosh shifokor",
+        bio: "Xurrak va uyqu apnoesini jarrohlik hamda konservativ usullar bilan davolashga ixtisoslashgan.",
         imageUrl: "",
       },
       {

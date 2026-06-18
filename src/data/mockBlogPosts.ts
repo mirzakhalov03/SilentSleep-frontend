@@ -8,7 +8,7 @@ export const mockBlogPosts: RichBlogPost[] = [
     excerpt: "Ko'pchilik xurrakni oddiy holat deb hisoblaydi. Ammo ba'zi belgilar apnoe mavjudligini ko'rsatishi mumkin.",
     date: '12 May, 2026',
     imageUrl: '',
-    author: 'Dr. SilentSleep',
+    author: 'Sokin Uyqu',
     readTime: '4 daqiqa',
     content: [
       "Uyqu apnoesi — ko'pchilik bilmagan holda yillar davomida azob chekadigan kasallik. Ko'pgina odamlar xurrak odatiy holat deb o'ylaydi, lekin bu ba'zan jiddiy muammoning belgisi bo'lishi mumkin.",
@@ -27,7 +27,7 @@ export const mockBlogPosts: RichBlogPost[] = [
     excerpt: "CPAP — uyqu apnoesini davolashda oltin standart. Qurilma qanday ishlashini va undan qanday foydalanishni bilib oling.",
     date: '5 May, 2026',
     imageUrl: '',
-    author: 'Dr. SilentSleep',
+    author: 'Sokin Uyqu',
     readTime: '6 daqiqa',
     content: [
       "CPAP (Continuous Positive Airway Pressure) — doimiy musbat havo bosimli nafas qo'llab-quvvatlash tizimi. Bu qurilma uyqu apnoesini davolashda dunyo bo'ylab eng ko'p ishlatiladigan va eng samarali usul hisoblanadi.",
@@ -45,7 +45,7 @@ export const mockBlogPosts: RichBlogPost[] = [
     excerpt: "Uyqu gigienasi — sifatli uyquning asosi. Har kuni amal qilishingiz mumkin bo'lgan oddiy ko'rsatmalar.",
     date: '28 Aprel, 2026',
     imageUrl: '',
-    author: 'Dr. SilentSleep',
+    author: 'Sokin Uyqu',
     readTime: '5 daqiqa',
     content: [
       "Sifatli uyqu — sog'lig'ingizning asosi. Ko'pchilik yaxshi uxlash uchun maxsus harakatlar qilish kerak deb o'ylamaydi. Lekin kichik odatlar uyquni tubdan o'zgartirishi mumkin.",
@@ -66,7 +66,7 @@ export const mockBlogPosts: RichBlogPost[] = [
     excerpt: "Xurrak faqat uyquda noqulaylik yaratmaydi — ba'zan u jiddiy kasalliklarning birinchi belgisi bo'lishi mumkin.",
     date: '20 Aprel, 2026',
     imageUrl: '',
-    author: 'Dr. SilentSleep',
+    author: 'Sokin Uyqu',
     readTime: '5 daqiqa',
     content: [
       "Xurrak — nafas yo'lidan o'tayotgan havo titroq to'qimalarni (tomoq yumshoq tanglayi va bo'g'iz devorlari) tebratishi natijasida vujudga keladi. Bu holatni dunyo aholisining katta qismi boshdan kechiradi.",
@@ -84,7 +84,7 @@ export const mockBlogPosts: RichBlogPost[] = [
     excerpt: "Uyqu apnoesi faqat kattalarda emas, bolalarda ham uchraydi. O'z vaqtida aniqlash muhim.",
     date: '10 Aprel, 2026',
     imageUrl: '',
-    author: 'Dr. SilentSleep',
+    author: 'Sokin Uyqu',
     readTime: '4 daqiqa',
     content: [
       "Bolalarda uyqu apnoesi — ko'p ota-onalar bilmagan muammo. Taxminan 1–4% bolalar uyqu apnoesidan aziyat chekadi, lekin ularning ko'pchiligi tashxis qo'yilmasdan qoladi.",
@@ -101,7 +101,7 @@ export const mockBlogPosts: RichBlogPost[] = [
     excerpt: "Polisomnografiya, uy uyqu testi, AHI — uyqu tashxisidagi asosiy tushunchalarni bilib oling.",
     date: '1 Aprel, 2026',
     imageUrl: '',
-    author: 'Dr. SilentSleep',
+    author: 'Sokin Uyqu',
     readTime: '7 daqiqa',
     content: [
       "Uyqu kasalliklari tashxisi — tibbiyotning maxsus sohasi. Ko'pchilik 'shunchaki yaxshi uxlamayapman' deb o'ylaydi, lekin to'g'ri tashxis uchun maxsus tekshiruvlar zarur.",

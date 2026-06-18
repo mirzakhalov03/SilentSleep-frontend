@@ -33,7 +33,7 @@ export default function Blog() {
         <div className="flex items-end justify-between mb-10">
           <div>
             <span className="text-xs font-bold text-brand-primary uppercase tracking-widest">
-              SilentSleep
+              Sokin Uyqu
             </span>
             <h1 className="mt-2 text-3xl sm:text-4xl font-bold text-brand-dark">
               {t.blog.title}

@@ -75,7 +75,7 @@ export default function LocationContact() {
           <div className="flex flex-col">
             <div className="flex-1 min-h-[380px]">
               <iframe
-                title="SilentSleep joylashuvi"
+                title="Sokin Uyqu joylashuvi"
                 src="https://yandex.uz/map-widget/v1/?ll=69.276312,41.320991&z=17&pt=69.276312,41.320991,pm2rdl"
                 width="100%"
                 height="100%"
