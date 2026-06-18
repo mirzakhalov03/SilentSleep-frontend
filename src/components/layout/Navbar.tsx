@@ -52,9 +52,9 @@ export default function Navbar() {
               {t.nav.apnea}
             </button>
           </li>
-          <li>
+          {/* <li>
             <Link to="/treatment" className={navLinkClass('/treatment')}>{t.nav.treatment}</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/about" className={navLinkClass('/about')}>{t.nav.about}</Link>
           </li>
