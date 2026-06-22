@@ -2,17 +2,25 @@ const uz = {
   nav: {
     apnea: "Xurrak va Apnoe",
     treatment: "Davolash",
-    about: "Biz Haqimizda",
+    about: "Biz haqimizda",
+    services: "Xizmatlar",
+    branches: "Filiallar",
     blog: "Blog",
     test: "Uyqu testi",
     cta: "UyquLab",
   },
   hero: {
+    eyebrow: "AASM standartlari",
     headline: "Xurrak va uyqudagi nafas to'xtashi sizni bezovta qiladimi?",
     subtext:
-      "Sokin Uyqu klinikasi zamonaviy usullar yordamida xurrak va uyqu apnoesini samarali davolaydi. Birinchi qadamni bugun qo'ying.",
-    ctaPrimary: "Bog'lanish",
+      "Sokin Uyqu — zamonaviy va xalqaro standartlardagi usullar bilan xurrak va uyqu apnoesini (OSA) samarali davolaydigan markaz. Birinchi qadamni bugun qo'ying.",
+    ctaPrimary: "Bepul uyqu testidan o'tish",
     ctaSecondary: "Ko'proq bilish",
+    stats: [
+      { value: "3", label: "filial: Toshkent · Andijon · Farg'ona" },
+      { value: "~3 soat", label: "uy testi natijasi (HSAT)" },
+      { value: "AASM", label: "xalqaro tashxis standarti" },
+    ],
   },
   location: {
     title: "Bizning manzil",
@@ -33,28 +41,35 @@ const uz = {
     subtitle: "KASALLIKNI TUSHUNISH",
     title: "Uyqu apnoesi nima?",
     description:
-      "Uyqu apnoesi — uyqu davomida nafas qayta-qayta to'xtab, yana boshlanadigan buzilish. Bunday pauzalar bir kechada yuzlab marta yuz berishi mumkin. Har bir pauza miya va tanani kisloroddan mahrum etadi, tiklovchi uyquni parchalaydi, vaqt o'tib yurak, miya va modda almashinuviga zarba beradi. Davolanmasa, gipertoniya, insult va 2-tip qandli diabet xavfini sezilarli oshiradi.",
-    ahiTitle: "AHI KO'RSATKICHI",
+      "Uyqu apnoesi — uyqu davomida nafas qayta-qayta to'xtab, yana boshlanadigan buzilish. Bunday pauzalar bir kechada yuzlab marta yuz berishi mumkin. Har bir pauza miya va tanani kisloroddan mahrum etadi, tiklovchi uyquni parchalaydi. Davolanmasa, gipertoniya, insult va 2-tip qandli diabet xavfini sezilarli oshiradi.",
+    ahiTitle: "AHI ko'rsatkichi",
     ahiBody:
-      "Kasallik og'irligi Apnoe-Gipopnoe indeksi (AHI) — bir soatlik uyqudagi nafas hodisalari soni bilan o'lchanadi. Yengil: 5–14 · O'rta: 15–29 · Og'ir: 30+. Tashxis qo'yish uchun laboratoriyada polisomnografiya yoki tasdiqlangan uy testi talab etiladi.",
+      "Kasallik og'irligi Apnoe-Gipopnoe indeksi (AHI) — bir soatlik uyqudagi nafas hodisalari soni bilan o'lchanadi.",
+    ahiLevels: [
+      { range: "5–14", label: "Yengil" },
+      { range: "15–29", label: "O'rta" },
+      { range: "30+", label: "Og'ir" },
+    ],
+    ahiNote:
+      "Tashxis qo'yish uchun laboratoriyada polisomnografiya (PSG) yoki tasdiqlangan uy testi (HSAT) talab etiladi.",
     types: [
       {
         icon: "obstructive",
-        title: "Obstruktiv uyqu apnoesi",
+        title: "Obstruktiv apnoe (OSA)",
         description:
           "Eng keng tarqalgan turi. Tomoq mushaklari bo'shashib nafas yo'lini yopadi — odam nafas olishga urinsa-da, havo o'tmaydi.",
       },
       {
         icon: "central",
-        title: "Markaziy uyqu apnoesi",
+        title: "Markaziy apnoe",
         description:
-          "Miya nafas mushaklariga signal yuborishni qisqa muddatga to'xtatadi. Ko'pincha yurak yetishmovchiligi, insult yoki opioid iste'moli bilan bog'liq.",
+          "Miya nafas mushaklariga signal yuborishni qisqa muddatga to'xtatadi. Ko'pincha yurak yetishmovchiligi yoki insult bilan bog'liq.",
       },
       {
         icon: "complex",
-        title: "Aralash murakkab apnoe",
+        title: "Aralash (murakkab) apnoe",
         description:
-          "Obstruktiv va markaziy apnoening belgilarini birlashtiradi. Ba'zan CPAP davolanishi boshlangach yuzaga keladi va ehtiyotkor sozlashni talab qiladi.",
+          "Obstruktiv va markaziy apnoening belgilarini birlashtiradi. Ba'zan CPAP boshlangach yuzaga keladi va ehtiyotkor sozlashni talab qiladi.",
       },
     ],
   },
@@ -65,10 +80,10 @@ const uz = {
     posts: [
       {
         id: "1",
-        title: "Uyqu apnoesining 7 ta asosiy belgilari",
+        title: "Uyqu apnoesining 7 ta asosiy belgisi",
         excerpt:
-          "Ko'pchilik xurrakni oddiy holat deb hisoblaydi. Ammo ba'zi belgilar apnoe mavjudligini ko'rsatishi mumkin.",
-        date: "12 May, 2026",
+          "Ko'pchilik xurrakni oddiy holat deb biladi. Ammo ba'zi belgilar apnoe mavjudligini ko'rsatishi mumkin.",
+        date: "12.05.2026",
         imageUrl: "",
         slug: "apnoe-belgilari",
       },
@@ -76,8 +91,8 @@ const uz = {
         id: "2",
         title: "CPAP terapiyasi: nima va qanday ishlaydi?",
         excerpt:
-          "CPAP — uyqu apnoesini davolashda oltin standart. Qurilma qanday ishlashini va undan qanday foydalanishni bilib oling.",
-        date: "5 May, 2026",
+          "CPAP — uyqu apnoesini davolashda oltin standart. Qurilma qanday ishlashini bilib oling.",
+        date: "05.05.2026",
         imageUrl: "",
         slug: "cpap-terapiyasi",
       },
@@ -86,7 +101,7 @@ const uz = {
         title: "Sog'lom uyqu uchun 10 ta maslahat",
         excerpt:
           "Uyqu gigienasi — sifatli uyquning asosi. Har kuni amal qilishingiz mumkin bo'lgan oddiy ko'rsatmalar.",
-        date: "28 Aprel, 2026",
+        date: "28.04.2026",
         imageUrl: "",
         slug: "soglom-uyqu-maslahatlari",
       },
@@ -112,7 +127,7 @@ const uz = {
       },
       {
         id: 2,
-        question: "Kunduzi tez-tez charchayman yoki uyqusirayman.",
+        question: "Kunduzi ko'pincha charchagan, holsiz yoki uyquchan bo'laman.",
         options: [
           { label: "Ha", score: 1 },
           { label: "Yo'q", score: 0 },
@@ -120,7 +135,7 @@ const uz = {
       },
       {
         id: 3,
-        question: "Kimdir uyqum davomida nafasim to'xtab qolishini ko'rgan.",
+        question: "Kimdir uyquda nafasim to'xtaganini kuzatgan.",
         options: [
           { label: "Ha", score: 1 },
           { label: "Yo'q", score: 0 },
@@ -128,7 +143,7 @@ const uz = {
       },
       {
         id: 4,
-        question: "Menda yuqori qon bosimi bor (yoki shu bo'yicha davolanaman).",
+        question: "Qon bosimim yuqori yoki uni davolayapman.",
         options: [
           { label: "Ha", score: 1 },
           { label: "Yo'q", score: 0 },
@@ -136,7 +151,7 @@ const uz = {
       },
       {
         id: 5,
-        question: "Tana massa indeksim 35 kg/m² dan yuqori.",
+        question: "Tana vazn indeksim (BMI) 35 dan yuqori.",
         options: [
           { label: "Ha", score: 1 },
           { label: "Yo'q", score: 0 },
@@ -172,24 +187,181 @@ const uz = {
         level: "low" as const,
         title: "Past xavf",
         message:
-          "Natijangiz (0–2 ball) uyqu apnoesi xavfi pastligini ko'rsatadi. Profilaktika va sog'lom uyqu odatlarini saqlab boring.",
+          "STOP-BANG bo'yicha xavf past. Agar baribir kuchli xurrak yoki kunduzgi charchoq bezovta qilsa, konsultatsiya foydali bo'ladi.",
       },
       medium: {
         level: "medium" as const,
-        title: "O'rtacha xavf",
+        title: "O'rta xavf",
         message:
-          "Natijangiz (3–4 ball) o'rtacha xavfni bildiradi. Mutaxassis bilan konsultatsiya tavsiya etiladi.",
+          "O'rta darajadagi xavf aniqlandi. Obyektiv tekshiruv (HSAT yoki PSG) holatni aniqlashtirishni tavsiya qilamiz.",
       },
       high: {
         level: "high" as const,
         title: "Yuqori xavf",
         message:
-          "Natijangiz (5–8 ball) yuqori xavfni ko'rsatadi. HSAT yoki PSG tekshiruvidan o'tishingiz tavsiya etiladi.",
+          "Yuqori xavf aniqlandi. Iloji boricha tezroq somnolog konsultatsiyasi va uyqu tekshiruvidan o'tish tavsiya etiladi.",
       },
     },
   },
+  process: {
+    eyebrow: "Biz haqimizda",
+    title: "Tinch uyquga ilmiy yondashuv",
+    lead:
+      "Sokin Uyqu — xurrak va uyqu apnoesini (OSA) xalqaro AASM standartlari bo'yicha tashxislash va davolashga ixtisoslashgan markaz. Biz har bir bemorga aniq tashxisdan boshlab, shaxsiy davolash rejasigacha to'liq yo'lni taklif qilamiz. Maqsadimiz — odamni shunchaki «xurrakdan» emas, uning sog'lig'iga ta'sir qiladigan sababdan xalos qilish.",
+    steps: [
+      {
+        num: "01",
+        title: "Tashxis",
+        description:
+          "Konsultatsiya, so'ngra uy uyqu testi (HSAT) yoki klinikada polisomnografiya (PSG) — muammoning og'irligini (AHI) aniq o'lchaymiz.",
+      },
+      {
+        num: "02",
+        title: "Sababni topish",
+        description:
+          "DISE (dori uyqusida endoskopiya) yordamida nafas yo'li qaysi darajada yopilishini aniqlaymiz.",
+      },
+      {
+        num: "03",
+        title: "Davolash",
+        description:
+          "CPAP terapiyasi, og'iz qurilmalari yoki zarur bo'lsa ko'p darajali jarrohlik — har biriga moslab tanlanadi.",
+      },
+    ],
+  },
+  why: {
+    eyebrow: "Nega Sokin Uyqu?",
+    title: "Ishonchli, ilmiy va to'liq yondashuv",
+    items: [
+      {
+        icon: "shield",
+        title: "AASM standartlari",
+        description: "Tashxis va davolash xalqaro somnologiya standartlari bo'yicha.",
+      },
+      {
+        icon: "check",
+        title: "To'liq yo'l bir joyda",
+        description: "Konsultatsiyadan tashxis, CPAP va jarrohlikkacha — bitta markazda.",
+      },
+      {
+        icon: "pulse",
+        title: "Zamonaviy diagnostika",
+        description: "HSAT, polisomnografiya (PSG) va DISE — aniq va obyektiv.",
+      },
+      {
+        icon: "pin",
+        title: "3 shaharda",
+        description: "Toshkent, Andijon va Farg'onada qabul qilamiz.",
+      },
+    ],
+  },
+  services: {
+    eyebrow: "Xizmatlar va narxlar",
+    title: "Tashxisdan davolashgacha — to'liq yo'l",
+    lead: "Narxlar so'mda ko'rsatilgan. Aniq summa va sizga mos format konsultatsiyada belgilanadi.",
+    columns: { service: "Xizmat", price: "Narx (so'm, …dan)", note: "Izoh" },
+    rows: [
+      { service: "Birinchi konsultatsiya (40 daq)", price: "250 000", note: "Kirish nuqtasi" },
+      { service: "Uy uyqu testi (HSAT)", price: "1 950 000", note: "Uyda; natija ~3 soatda" },
+      { service: "HSAT — klinikada", price: "2 450 000", note: "Natija ~3 soatda" },
+      { service: "Polisomnografiya (PSG)", price: "2 900 000", note: "To'liq laboratoriya tekshiruvi" },
+      { service: "Split-night", price: "3 500 000", note: "Tashxis + titratsiya bir kechada" },
+      { service: "DISE (dori uyqusida endoskopiya)", price: "2 500 000", note: "Nafas yo'lini baholash" },
+      { service: "CPAP titratsiya (statsionar)", price: "2 000 000", note: "Optimal bosimni topish" },
+      { service: "Telemeditsina", price: "200 000", note: "Masofaviy konsultatsiya" },
+    ],
+    footnotePre:
+      "Operativ davolash (burundan til asosigacha, 4 daraja + ko'p darajali jarrohlik) narxi konsultatsiyada belgilanadi. CPAP/BiPAP qurilma ijarasi va uy testi ",
+    footnoteLink: "UyquLab",
+    footnotePost: " orqali. Aniq narxni registraturadan aniqlang.",
+  },
+  branches: {
+    eyebrow: "Filiallar",
+    title: "Bizni 3 shaharda topasiz",
+    routeLabel: "Yo'lni ko'rsatish →",
+    items: [
+      {
+        tag: "Asosiy",
+        city: "Toshkent",
+        lines: [
+          "Qashqar dahasi, 24A, 100017",
+          "Dush–Juma · 09:00–20:00 · Shanba · 09:00–17:00",
+          "Eng yaqin metro — Abdulla Qodiriy",
+        ],
+        routeUrl: "https://yandex.uz/maps/-/CPspZAjD",
+        mapSrc:
+          "https://www.google.com/maps?q=Qashqar%20dahasi%2024A%20Toshkent%20Abdulla%20Qodiriy&output=embed",
+        mapTitle: "Toshkent filiali xaritasi",
+      },
+      {
+        tag: "Farg'ona vodiysi",
+        city: "Andijon",
+        lines: [
+          "Qabul jadvali bo'yicha somnolog konsultatsiyasi va uy testi (HSAT).",
+          "Aniq manzil va kunlar registraturada.",
+        ],
+        routeUrl: null,
+        mapSrc: "https://www.google.com/maps?q=Andijon&output=embed",
+        mapTitle: "Andijon filiali xaritasi",
+      },
+      {
+        tag: "Farg'ona vodiysi",
+        city: "Farg'ona",
+        lines: [
+          "Vodiy hududidagi bemorlar uchun konsultatsiya va tashxis xizmatlari.",
+          "Aniq manzil va kunlar registraturada.",
+        ],
+        routeUrl: null,
+        mapSrc: "https://www.google.com/maps?q=Farg'ona&output=embed",
+        mapTitle: "Farg'ona filiali xaritasi",
+      },
+    ],
+  },
+  faq: {
+    eyebrow: "Savol-javob",
+    title: "Tez-tez beriladigan savollar",
+    items: [
+      {
+        q: "Xurrak — bu kasallikmi?",
+        a: "Xurrakning o'zi har doim ham kasallik emas, ammo u uyqu apnoesining eng keng tarqalgan belgisi bo'lishi mumkin. Agar xurrak kuchli bo'lsa, kunduzi charchoq, uyg'onganda bosh og'rig'i yoki nafas to'xtashi kuzatilsa — tekshiruvdan o'tish kerak.",
+      },
+      {
+        q: "Uyqu apnoesi qanday aniqlanadi?",
+        a: "Aniq tashxis uchun obyektiv test kerak: uyda HSAT yoki klinikada polisomnografiya (PSG). Ular bir soatlik uyqudagi nafas to'xtashlari sonini (AHI) o'lchaydi.",
+      },
+      {
+        q: "AHI nima va qancha bo'lishi normal?",
+        a: "AHI — Apnoe-Gipopnoe indeksi. Yengil: 5–14, o'rta: 15–29, og'ir: 30+. 5 dan past odatda normal hisoblanadi.",
+      },
+      {
+        q: "CPAP — bu umrbod-mi?",
+        a: "CPAP og'ir holatlarda eng samarali usul. Ba'zi bemorlarda vazn kamaytirish, jarrohlik yoki og'iz qurilmasi muqobil bo'lishi mumkin. Reja har doim individual.",
+      },
+      {
+        q: "Tekshiruvga tayyorgarlik kerakmi?",
+        a: "Uy testi (HSAT) uchun maxsus tayyorgarlik shart emas — qurilmani uyda tunab, ertasiga qaytarasiz. Batafsil ko'rsatmalar konsultatsiyada beriladi.",
+      },
+      {
+        q: "Bolalarda ham uyqu apnoesi bo'ladimi?",
+        a: "Ha. Bolalarda ko'pincha bodomsimon bezlar yoki adenoid kattalashuvi sabab bo'ladi. Bola xurrak qilsa, og'zi ochiq uxlasa yoki kunduzi diqqati zaif bo'lsa — LOR ko'rigi tavsiya etiladi.",
+      },
+    ],
+  },
+  contact: {
+    eyebrow: "Bog'lanish",
+    title: "Birinchi qadamni bugun qo'ying",
+    socialsLabel: "Ijtimoiy tarmoqlar",
+    formTitle: "Qayta qo'ng'iroq so'rash",
+    nameLabel: "Ismingiz",
+    phoneLabel: "Telefon raqamingiz",
+    phonePlaceholder: "+998 __ ___ __ __",
+    commentLabel: "Izoh (ixtiyoriy)",
+    submit: "Yuborish",
+    success: "Rahmat! Tez orada bog'lanamiz.",
+  },
   footer: {
-    tagline: "Sog'lom uyqu — sog'lom hayot.",
+    tagline:
+      "Sog'lom uyqu — sog'lom hayot. Xurrak va uyqu apnoesini xalqaro standartlar bo'yicha davolaymiz.",
     rights: "© 2026 Sokin Uyqu. Barcha huquqlar himoyalangan.",
     contact: "Aloqa",
     nav: "Sahifalar",

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from '../../hooks/useTranslation'
 import { useLanguage } from '../../contexts/LanguageContext'
+import { SITE } from '../../config/site'
 import Logo from '../ui/Logo'
 
 export default function Footer() {
@@ -49,8 +50,18 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-white/70">
               <li>{t.location.address}</li>
               <li>
-                <a href={`tel:${t.location.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">
-                  {t.location.phone}
+                <a href={`tel:${SITE.phoneTel}`} className="hover:text-white transition-colors">
+                  {SITE.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a href={SITE.telegram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Telegram: {SITE.telegramHandle}
+                </a>
+              </li>
+              <li>
+                <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Instagram: {SITE.instagramHandle}
                 </a>
               </li>
             </ul>

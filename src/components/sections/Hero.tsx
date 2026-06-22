@@ -5,12 +5,8 @@ import Button from '../ui/Button'
 export default function Hero() {
   const t = useTranslation()
 
-  function scrollToContact() {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  function scrollToApnea() {
-    document.getElementById('apnea')?.scrollIntoView({ behavior: 'smooth' })
+  function scrollTo(id: string) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -24,7 +20,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wider border border-white/20">
           <span className="w-1.5 h-1.5 rounded-full bg-white inline-block" />
-          Otolor Klinikasi
+          {t.hero.eyebrow}
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
@@ -36,12 +32,22 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Button size="lg" onClick={scrollToContact}>
+          <Button size="lg" onClick={() => scrollTo('test')}>
             {t.hero.ctaPrimary}
           </Button>
-          <Button size="lg" variant="outline" onClick={scrollToApnea} className="border-white text-white hover:bg-white hover:text-brand-primary">
+          <Button size="lg" variant="outline" onClick={() => scrollTo('apnea')} className="border-white text-white hover:bg-white hover:text-brand-primary">
             {t.hero.ctaSecondary}
           </Button>
+        </div>
+
+        {/* Stats */}
+        <div className="mt-12 flex flex-wrap justify-center gap-x-10 gap-y-6 text-left">
+          {t.hero.stats.map((stat, i) => (
+            <div key={i} className="min-w-[140px]">
+              <div className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</div>
+              <div className="text-sm text-white/70 mt-0.5">{stat.label}</div>
+            </div>
+          ))}
         </div>
 
       </div>

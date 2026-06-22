@@ -59,6 +59,16 @@ export default function Navbar() {
             <Link to="/about" className={navLinkClass('/about')}>{t.nav.about}</Link>
           </li>
           <li>
+            <button onClick={() => scrollToSection('services')} className={linkClass}>
+              {t.nav.services}
+            </button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection('branches')} className={linkClass}>
+              {t.nav.branches}
+            </button>
+          </li>
+          <li>
             <Link to="/blog" className={navLinkClass('/blog')}>{t.nav.blog}</Link>
           </li>
           <li>
@@ -68,8 +78,8 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Right: language switcher */}
-        <div className="hidden md:flex items-center">
+        {/* Right: language switcher + UyquLab CTA */}
+        <div className="hidden md:flex items-center gap-5">
           <div className="flex items-center gap-1 text-sm font-medium">
             <button
               onClick={() => setLang('uz')}
@@ -89,6 +99,34 @@ export default function Navbar() {
               RU
             </button>
           </div>
+
+          {/* UyquLab CTA — redirects to the standalone UyquLab SPA */}
+          <a
+            href={UYQULAB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-2 rounded-full bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-brand-primary/30 transition-all duration-300 hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-primary/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2"
+          >
+            {/* live pulse — signals "tracking" */}
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
+            </span>
+            {t.nav.cta}
+            {/* arrow — signals this navigates somewhere, nudges on hover */}
+            <svg
+              aria-hidden
+              viewBox="0 0 24 24"
+              className="h-4 w-4 animate-nudge-x"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -107,42 +145,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Hanging CTA — dangles from the navbar's bottom edge, centered (all viewports).
-          Redirects to the standalone UyquLab SPA. Home page only. */}
-      {location.pathname === '/' && (
-      <a
-        href={UYQULAB_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group absolute left-1/2 top-full z-40 inline-flex -mt-px -translate-x-1/2 cursor-pointer items-center gap-2.5 rounded-b-3xl bg-white px-9 pt-3.5 pb-5 text-base font-semibold text-brand-primary shadow-lg shadow-brand-dark/20 ring-1 ring-black/5 transition-all duration-300 hover:bg-brand-primary hover:text-white hover:pb-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2"
-      >
-        {/* breathing halo — white, so it's invisible over the navbar and glows only over the hero */}
-        <span
-          aria-hidden
-          className="absolute inset-0 -z-10 rounded-b-3xl bg-white blur-md animate-hang-glow"
-        />
-        {/* live pulse — signals "tracking" */}
-        <span className="relative flex h-2.5 w-2.5">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-primary opacity-75 group-hover:bg-white" />
-          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-brand-primary group-hover:bg-white" />
-        </span>
-        {t.nav.cta}
-        {/* arrow — signals this navigates somewhere, nudges on hover */}
-        <svg
-          aria-hidden
-          viewBox="0 0 24 24"
-          className="h-4 w-4 animate-nudge-x"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={2.5}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </svg>
-      </a>
-      )}
-
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4">
@@ -155,6 +157,12 @@ export default function Navbar() {
           <Link to="/about" onClick={() => setMenuOpen(false)} className={navLinkClass('/about')}>
             {t.nav.about}
           </Link>
+          <button onClick={() => scrollToSection('services')} className="text-left text-sm font-medium text-content-base hover:text-brand-primary">
+            {t.nav.services}
+          </button>
+          <button onClick={() => scrollToSection('branches')} className="text-left text-sm font-medium text-content-base hover:text-brand-primary">
+            {t.nav.branches}
+          </button>
           <Link to="/blog" onClick={() => setMenuOpen(false)} className={navLinkClass('/blog')}>
             {t.nav.blog}
           </Link>

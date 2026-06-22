@@ -48,6 +48,20 @@ export default function ApneaInfo() {
               <p className="text-sm text-teal-900 leading-relaxed">
                 {t.apnea.ahiBody}
               </p>
+
+              {/* Severity scale */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {t.apnea.ahiLevels.map((level) => (
+                  <div
+                    key={level.range}
+                    className="flex-1 min-w-[80px] bg-white rounded-xl border-t-[3px] border-teal-400 px-3 py-2.5 text-center"
+                  >
+                    <div className="text-lg font-bold text-brand-dark">{level.range}</div>
+                    <div className="text-xs text-content-muted">{level.label}</div>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 text-xs text-teal-900/80 leading-relaxed">{t.apnea.ahiNote}</p>
             </div>
           </div>
 

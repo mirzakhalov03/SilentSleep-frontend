@@ -13,7 +13,7 @@ export default function Logo({ variant = 'blue', className = '' }: LogoProps) {
     <div className={`flex items-center gap-2.5 ${className}`}>
       <img src={src} alt="Sokin Uyqu logo" className="h-8 w-auto" />
       <span className={`text-xl font-bold tracking-tight ${variant === 'white' ? 'text-white' : 'text-brand-dark'}`}>
-        Sokin <span className={variant === 'white' ? 'text-white/80' : 'text-brand-primary'}>Uyqu</span>
+        <span className={variant === 'white' ? 'text-white/80' : 'text-brand-primary'}>Sokin Uyqu</span>
       </span>
     </div>
   )

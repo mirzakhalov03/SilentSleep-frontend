@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
+import Fab from './components/layout/Fab'
 import Home from './pages/Home'
 import Treatment from './pages/Treatment'
 import About from './pages/About'
@@ -23,6 +24,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <Fab />
     </div>
   )
 }

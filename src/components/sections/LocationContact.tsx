@@ -1,4 +1,5 @@
 import { useTranslation } from '../../hooks/useTranslation'
+import { SITE } from '../../config/site'
 import Button from '../ui/Button'
 
 export default function LocationContact() {
@@ -58,6 +59,30 @@ export default function LocationContact() {
                 <div>
                   <p className="font-semibold text-brand-dark">Dush – Juma · {weekdayTime}</p>
                   <p className="text-sm text-content-muted mt-0.5">Shanba · {saturdayTime}</p>
+                </div>
+              </div>
+
+              {/* Socials */}
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-brand-secondary flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4h16v16H4z M4 8h16" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-semibold text-brand-dark mb-2">{t.contact.socialsLabel}</p>
+                  <div className="flex gap-3">
+                    <a href={SITE.telegram} target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="w-9 h-9 rounded-full bg-brand-primary text-white flex items-center justify-center hover:scale-105 transition-transform">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                        <path d="M9.8 15.6l-.4 4c.5 0 .7-.2 1-.5l2.4-2.3 5 3.6c.9.5 1.6.2 1.8-.8l3.3-15.4c.3-1.2-.5-1.8-1.4-1.5L1.2 9.6c-1.2.5-1.2 1.1-.2 1.4l5 1.6L17.6 5c.5-.3 1-.2.6.2" />
+                      </svg>
+                    </a>
+                    <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-full bg-brand-primary text-white flex items-center justify-center hover:scale-105 transition-transform">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                        <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1018.6 12 6.6 6.6 0 0012 5.4zm0 10.9A4.3 4.3 0 1116.3 12 4.3 4.3 0 0112 16.3zm6.8-11.2a1.5 1.5 0 11-1.5-1.5 1.5 1.5 0 011.5 1.5z" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
